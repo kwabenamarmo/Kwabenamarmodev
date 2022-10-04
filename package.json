@@ -2,9 +2,9 @@
   "name": "kwabenamarmodev",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "build-css": "tailwindcss build src/styles.css -o public/styles.css"
+    "build-css": "tailwindcss build src/styles.css -o public/styles.css -i public/index.html"
   },
   "keywords": [],
   "author": "",
