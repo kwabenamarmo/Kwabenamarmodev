@@ -15,8 +15,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="km.ico" rel="shortcut icon" type="image/ico" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="email.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init('YPOSNPv4RemSoYnyu');
+    })();
+</script>
+
 </head>
 <!--- End of Head --->
 
@@ -48,7 +57,7 @@
         class="mb-4 text-5xl tracking-tight p-8 block mb-2 text-sm font-medium dark:text-gray-300 text-center text-gray-700 dark:text-white">
         Thanks for reaching out.<br> How can I help you today?
       </h2>
-      <form action="#" class="space-y-8">
+      <form id="form" class="space-y-8" method="post">
         <div class="flex flex-wrap -mx-3 mb-6">
           <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="grid-first-name">
@@ -86,7 +95,7 @@
             class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
             placeholder="Leave a comment..."></textarea>
         </div>
-        <button type="submit"
+        <button type="submit" id="button" value="Send message" onclick="sendmessage()"
           class="py-3 px-5 text-sm font-medium text-center text-white rounded-full bg-blue-500 sm:w-fit hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
           Send message
         </button>
