@@ -17,14 +17,7 @@
   <link rel="stylesheet" href="styles.css" />
   <script src="email.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script type="text/javascript">
-    (function() {
-        // https://dashboard.emailjs.com/admin/account
-        emailjs.init('YPOSNPv4RemSoYnyu');
-    })();
-</script>
+ 
 
 </head>
 <!--- End of Head --->
@@ -60,42 +53,42 @@
       <form id="form" class="space-y-8" method="post">
         <div class="flex flex-wrap -mx-3 mb-6">
           <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="grid-first-name">
+            <label for="first_name_field" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="grid-first-name">
               First Name
             </label>
             <input
               class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-              id="grid-first-name" type="text" placeholder="First Name" />
+              id="grid-first-name" type="text" placeholder="First Name" type="text" name="first_name" id="first_name_field" />
           </div>
           <div class="w-full md:w-1/2 px-3">
-            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="grid-last-name">
+            <label for="last_name_field" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="grid-last-name">
               Last Name
             </label>
             <input
               class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-              id="grid-last-name" type="text" placeholder="Last Name" />
+              id="grid-last-name" type="text" placeholder="Last Name" type="text" name="last_name" id="last_name_field" />
           </div>
         </div>
         <div>
-          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
+          <label for="email_field" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
           <input type="email" id="email"
             class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-            placeholder="name@email.com" required />
+            placeholder="name@email.com" type="email" name="email" id="email_field" required />
         </div>
         <div>
-          <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
+          <label for="subject_field" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
           <input type="text" id="subject"
             class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-            placeholder="Let us know how we can help you" required />
+            placeholder="Let us know how we can help you" type="subject" name="subject" id="subject_field"  required />
         </div>
         <div class="sm:col-span-2">
-          <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your
+          <label  for="message_field"  class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your
             message</label>
           <textarea id="message" rows="6"
             class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-            placeholder="Leave a comment..."></textarea>
+            placeholder="Leave a comment..." name="message" id="message_field" rows="6"></textarea>
         </div>
-        <button type="submit" id="button" value="Send message" onclick="sendmessage()"
+        <button type="submit" 
           class="py-3 px-5 text-sm font-medium text-center text-white rounded-full bg-blue-500 sm:w-fit hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
           Send message
         </button>
@@ -103,7 +96,7 @@
     </div>
   </section>
 
-  <script src="" async defer></script>
+  <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=qjbja095&n=n1.ratufa.io"></script>
 </body>
 <!--- End of Body--->
 
