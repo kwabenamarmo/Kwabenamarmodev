@@ -23,11 +23,11 @@ I have experience in design and UI/UX design, allowing me to create visually app
 # Projects
 Here are some notable projects I have worked on:
 
-# Project X - A web application built with React, utilizing Tailwind CSS for styling. This project involved implementing complex UI components and optimizing the application for performance.
+# Kwarleyz Group Website - A web application built with Vanilla Javascript, utilizing CSS for styling. This project involved implementing complex UI components and optimizing the application for performance.
 
-# Project Y - A mobile-responsive website developed using HTML, CSS, and JavaScript. I designed the user interface and ensured a seamless user experience across different devices.
+# Wonda World Estates - A mobile-responsive website developed using HTML, CSS, and JavaScript. I designed the user interface and ensured a seamless user experience across different devices.
 
-# Project Z - A C-based application that incorporated HTML and JavaScript. This project involved integrating various APIs and creating dynamic features for enhanced user interactions.
+# Restaurant Management App - A C-based application that incorporated HTML and JavaScript. This project involved integrating various APIs and creating dynamic features for enhanced user interactions.
 
 ## Work Experience
 I have worked as a frontend engineer at various companies, contributing my expertise in the following areas:
@@ -41,8 +41,11 @@ Education
 I have pursued formal education in computer science or related fields. My educational background has equipped me with a solid foundation in programming and problem-solving skills.
 
 ## Contact Information
-You can reach me via the following channels:
+You can reach me via the following channels: 
 
+- Twitter : @kwabena_marmo
+- Instagram : @kwabenamarmo
+- Linkedin : Daniel Kwabena Marmo
 Feel free to reach out if you have any questions or if you'd like to discuss potential collaborations.
 
 # Thank you for taking the time to review my README. I look forward to connecting with you!
