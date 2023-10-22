@@ -21,11 +21,11 @@ I have experience in design and UI/UX design, allowing me to create visually app
 # Projects
 Here are some notable projects I have worked on:
 
-# Kwarleyz Group Website [kwarleyzgroup.com] - A web application built with Vanilla Javascript, utilizing CSS for styling. This project involved implementing complex UI components and optimizing the application for performance.
+ Kwarleyz Group Website [kwarleyzgroup.com] - A web application built with Vanilla Javascript, utilizing CSS for styling. This project involved implementing complex UI components and optimizing the application for performance.
 
-# Wonda World Estates [wondaworldestates.com]- A mobile-responsive website developed using HTML, CSS, and JavaScript. I designed the user interface and ensured a seamless user experience across different devices.
+Wonda World Estates [wondaworldestates.com] - A mobile-responsive website developed using HTML, CSS, and JavaScript. I designed the user interface and ensured a seamless user experience across different devices.
 
-# Restaurant Management App - A C-based application that incorporated HTML and JavaScript. This project involved integrating various APIs and creating dynamic features for enhanced user interactions.
+Restaurant Management App - A C-based application that incorporated HTML and JavaScript. This project involved integrating various APIs and creating dynamic features for enhanced user interactions.
 
 ## Work Experience
 I have worked as a frontend engineer at various companies, contributing my expertise in the following areas:
