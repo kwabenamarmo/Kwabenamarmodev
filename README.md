@@ -7,13 +7,13 @@ Welcome to the README for Daniel Kwabena Marmo, a front-end engineer with expert
 Here are the technologies and skills that I specialize in:
 
 # Programming Languages
-C
-HTML
-JavaScript
-React
-CSS
-BASH
-Tailwind CSS
+### C
+### HTML
+### JavaScript
+### React
+### CSS
+### BASH
+### Tailwind CSS
 
 # Design and UI/UX Design
 I have experience in design and UI/UX design, allowing me to create visually appealing and user-friendly interfaces. I can effectively translate design concepts into responsive and interactive web applications.
