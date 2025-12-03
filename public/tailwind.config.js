@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  // CORRECT FIX: This array tells Tailwind which files to scan for utility classes.
+  content: [
+    "./index.html",    // Scans your main page
+    "./contact.html",  // Scans your contact page
+    // Include any other paths where you use Tailwind classes (e.g., './js/*.js')
+  ],
   presets: [],
   darkMode: 'media', // or 'class'
   theme: {

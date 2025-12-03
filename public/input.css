@@ -1,9 +1,8 @@
-/* input.css (or whatever file you use as input) */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Any custom CSS you want to add */
+/* Custom CSS for animation from contact.html - recommended practice */
 .fade-up {
   animation: fadeInUp 0.7s ease forwards;
 }
