@@ -1,107 +1,83 @@
+<!-- Tailwind 3 Modern, Animated & Mobile-Friendly Contact Page -->
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!-[endif]-->
-<html>
-<!--- Start of Head --->
-
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Daniel Kwabena Marmo | Contact Page</title>
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="km.ico" rel="shortcut icon" type="image/ico" />
-  <link rel="stylesheet" href="styles.css" />
-  <script src="email.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet" />
- 
+  <title>Contact | Daniel Kwabena Marmo</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <style>
+    @keyframes fadeInUp {
+      0% {opacity:0; transform:translateY(20px);} 
+      100% {opacity:1; transform:translateY(0);} 
+    }
+    .fade-up {animation: fadeInUp 0.7s ease forwards;}
+  </style>
 </head>
-<!--- End of Head --->
+<body class="bg-gray-50 text-gray-700">
 
-<!--- Start of Body--->
+  <!-- Navigation Buttons -->
+  
 
-<body class="text-gray-600 text-base">
-  <!--- Start of Navigation--->
+  <!-- Logo -->
+  
 
-  <nav class="flex items-center justify-between flex-wrap bg-blue-darkest p-6 z-10 float-right">
-    <div class="object-left-top p-8 flex items-center flex-no-shrink text-white mr-6">
-      <a href="contact.html"><img class="hover:animate-spin object-cover h-10 w-full"
-          src="./img/reload.png" />Refresh</a>
-    </div>
-    <div class="object-left-top p-8 flex items-center flex-no-shrink text-white mr-6">
-      <a href="index.html"><img class="hover:animate-bounce object-cover h-10 w-full"
-          src="./img/close.png" />close</a>
-    </div>
-  </nav>
-  <!--- End of Navigation--->
+  <!-- Contact Section -->
+  <section class="py-10 md:py-16 fade-up">
+    <div class="max-w-xl mx-auto px-4">
 
-  <!--- Start of Body--->
-  <div class="object-left-top p-8 flex items-center flex-no-shrink text-blue-600 mr-6">
-    <a href="index.html"><img class="hover:animate-bounce object-cover h-6 w-full" src="km.png" /></a>
-  </div>
-  <!--- Contact Form--->
-  <section class="bg-white dark:bg-gray-200">
-    <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-      <h2
-        class="mb-4 text-5xl tracking-tight p-8 block mb-2 text-sm font-medium dark:text-gray-300 text-center text-gray-700 dark:text-white">
-        Thanks for reaching out.<br> How can I help you today?
+      <h2 class="text-center text-3xl md:text-4xl font-semibold text-gray-800 leading-snug mb-6 animate-fadeIn">
+        Thanks for reaching out.<br />How can I help you today?
       </h2>
-      <form id="form" class="space-y-8" method="post">
-        <div class="flex flex-wrap -mx-3 mb-6">
-          <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-            <label for="first_name_field" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="grid-first-name">
-              First Name
-            </label>
-            <input
-              class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-              id="grid-first-name" type="text" placeholder="First Name" type="text" name="first_name" id="first_name_field" />
+
+      <form id="form" method="POST" class="space-y-6 bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-gray-100 fade-up">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-medium">First Name</label>
+            <input type="text" name="first_name" placeholder="First Name"
+              class="mt-2 w-full rounded-lg border border-gray-300 bg-white p-3 text-sm focus:ring-blue-500 focus:border-blue-500 transition" />
           </div>
-          <div class="w-full md:w-1/2 px-3">
-            <label for="last_name_field" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300" for="grid-last-name">
-              Last Name
-            </label>
-            <input
-              class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-              id="grid-last-name" type="text" placeholder="Last Name" type="text" name="last_name" id="last_name_field" />
+
+          <div>
+            <label class="block text-sm font-medium">Last Name</label>
+            <input type="text" name="last_name" placeholder="Last Name"
+              class="mt-2 w-full rounded-lg border border-gray-300 bg-white p-3 text-sm focus:ring-blue-500 focus:border-blue-500 transition" />
           </div>
         </div>
+
         <div>
-          <label for="email_field" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
-          <input type="email" id="email"
-            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-            placeholder="name@email.com" type="email" name="email" id="email_field" required />
+          <label class="block text-sm font-medium">Your Email</label>
+          <input type="email" name="email" placeholder="name@email.com" required
+            class="mt-2 w-full rounded-lg border border-gray-300 bg-white p-3 text-sm focus:ring-blue-500 focus:border-blue-500 transition" />
         </div>
+
         <div>
-          <label for="subject_field" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
-          <input type="text" id="subject"
-            class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-            placeholder="Let us know how we can help you" type="subject" name="subject" id="subject_field"  required />
+          <label class="block text-sm font-medium">Subject</label>
+          <input type="text" name="subject" placeholder="Let me know how I can help you" required
+            class="mt-2 w-full rounded-lg border border-gray-300 bg-white p-3 text-sm focus:ring-blue-500 focus:border-blue-500 transition" />
         </div>
-        <div class="sm:col-span-2">
-          <label  for="message_field"  class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your
-            message</label>
-          <textarea id="message" rows="6"
-            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-            placeholder="Leave a comment..." name="message" id="message_field" rows="6"></textarea>
+
+        <div>
+          <label class="block text-sm font-medium">Your Message</label>
+          <textarea name="message" rows="6" placeholder="Write your message here..."
+            class="mt-2 w-full rounded-lg border border-gray-300 bg-white p-3 text-sm focus:ring-blue-500 focus:border-blue-500 transition"></textarea>
         </div>
-        <button type="submit" 
-          class="py-3 px-5 text-sm font-medium text-center text-white rounded-full bg-blue-500 sm:w-fit hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-          Send message
-        </button>
+
+        <div class="flex items-center gap-4">
+  <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-full bg-blue-500 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300">
+    Send message
+  </button>
+  <a href="index.html" class="py-3 px-5 text-sm font-medium text-center text-blue-600 rounded-full border border-blue-500 hover:bg-blue-50 transition">
+    Home
+  </a>
+</div>
       </form>
     </div>
   </section>
 
-  <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=qjbja095&n=n1.ratufa.io"></script>
 </body>
-<!--- End of Body--->
-
-<!--- Start of footer--->
-<footer></footer>
-<!--- End of footer--->
-
 </html>
