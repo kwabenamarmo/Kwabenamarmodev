@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom CSS for animation from contact.html - recommended practice */
+/* Custom animation styles moved from contact.html <style> tag */
 .fade-up {
   animation: fadeInUp 0.7s ease forwards;
 }

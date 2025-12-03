@@ -1,222 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Daniel Kwabena Marmo | AWS Cloud Engineer & Developer</title>
-    <meta name="description" content="AWS Cloud Engineer and Developer portfolio showcasing cloud infrastructure, DevOps, and serverless development." />
-    <link href="km.ico" rel="shortcut icon" type="image/ico" />
-    <link href="styles.css" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Daniel Kwabena Marmo | AWS Cloud Engineer & Developer</title>
+  <meta name="description" content="AWS Cloud Engineer and Developer portfolio showcasing cloud infrastructure, DevOps, and serverless development." />
+
+  <link href="km.ico" rel="shortcut icon" type="image/ico" />
+  <!-- Tailwind CDN for quick prototyping -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 
-<body class="font-inter text-gray-700 antialiased bg-gray-50">       <header class="bg-blue-900 text-white fixed w-full z-50">
-    <div class="max-w-5xl mx-auto flex items-center justify-between py-4 px-6">
-      <a href="index.html" class="flex items-center">
-        <img src="km.png" alt="Logo" class="h-8 w-auto hover:scale-110 transition-transform duration-300" />
-      </a>
+<body class="font-inter text-gray-700 antialiased">
 
-            <div x-data="{ open: false }" class="md:hidden">
-        <button @click="open = !open" class="focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path :class="{ 'hidden': open, 'block': !open }" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16" />
-            <path x-cloak :class="{ 'block': open, 'hidden': !open }" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
+  <!-- NAVBAR -->
+  <header class="bg-blue-900 text-white fixed w-full z-20">
+    <div class="max-w-5xl mx-auto flex items-center justify-between py-4 px-6">
+      <a href="index.html" class="flex items-center">
+        <img src="km.png" alt="Logo" class="h-8 w-auto hover:scale-110 transition-transform duration-300" />
+      </a>
 
-            <nav class="hidden md:flex space-x-6">
-        <a href="index.html" class="hover:text-blue-300 transition-colors">Home</a>
-        <a href="contact.html"
-           class="px-4 py-2 bg-blue-600 rounded-full hover:bg-blue-500 transition-colors">Say Hello!</a>
-      </nav>
+      <!-- Mobile Nav Toggle -->
+      <div x-data="{ open: false }" class="md:hidden">
+        <button @click="open = !open" class="focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path :class="{ 'hidden': open, 'block': !open }" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+            <path :class="{ 'block': open, 'hidden': !open }" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
 
-    </div>
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-blue-300 transition-colors">Home</a>
+        <a href="contact.html"
+           class="px-4 py-2 bg-blue-600 rounded-full hover:bg-blue-500 transition-colors">Say Hello!</a>
+      </nav>
 
-            <div x-show="open" x-cloak class="bg-blue-900 md:hidden">
-      <nav class="flex flex-col p-4 space-y-3">
-        <a href="index.html" @click="open = false" class="text-white hover:text-blue-300 transition-colors">Home</a>
-        <a href="contact.html" @click="open = false"
-           class="px-4 py-2 bg-blue-600 rounded-full text-center hover:bg-blue-500 transition-colors">Say Hello!</a>
-      </nav>
-    </div>
-  </header>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div x-show="open" x-cloak class="bg-blue-900 md:hidden">
+      <nav class="flex flex-col p-4 space-y-3">
+        <a href="index.html" class="text-white hover:text-blue-300 transition-colors">Home</a>
+        <a href="contact.html"
+           class="px-4 py-2 bg-blue-600 rounded-full text-center hover:bg-blue-500 transition-colors">Say Hello!</a>
+      </nav>
+    </div>
+  </header>
 
 
-  <main class="pt-24">         <section class="min-h-screen flex flex-col justify-center bg-cover bg-center"
-             style="background-image: url('./img/bg-image.png');">
-            <div class="bg-white bg-opacity-80 p-8 md:p-16 max-w-3xl mx-auto rounded-lg backdrop-blur-sm shadow-xl">
-        <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-4 text-center md:text-left">           Hi! I am <br>
-          <span class="text-blue-600">Daniel Kwabena Marmo</span><br>
-          AWS Cloud Engineer & Developer
-        </h1>
-        <p class="mt-4 text-xl text-gray-600 text-center md:text-left">           I build scalable, reliable, and performant cloud applications on AWS.
-        </p>
-        <div class="mt-8 flex flex-wrap justify-center md:justify-start space-x-4">           <a href="contact.html"
-             class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-500 transition">
-            Let's Connect
-          </a>
-          <a href="https://drive.google.com/file/d/1uGkb1WPBB-zYA_2HgR5THoivwev7fWtE/view?usp=sharing"
-             target="_blank"
-             class="px-6 py-3 border border-blue-600 text-blue-600 font-semibold rounded-full hover:bg-blue-50 transition">
-            My Resume
-          </a>
-        </div>
-      </div>
-    </section>
+  <main class="pt-24"> <!-- add padding top to avoid navbar overlap -->
 
----
+    <!-- HERO SECTION -->
+    <section class="min-h-screen flex flex-col justify-center bg-cover bg-center"
+             style="background-image: url('./img/bg-image.png');">
+      <div class="bg-white bg-opacity-70 dark:bg-opacity-50 p-8 md:p-16 max-w-3xl mx-auto rounded-lg backdrop-blur-sm">
+        <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-4">
+          Hi! I am <br>
+          <span class="text-blue-600">Daniel Kwabena Marmo</span><br>
+          AWS Cloud Engineer & Developer
+        </h1>
+        <p class="mt-4 text-xl text-gray-600">
+          I build scalable, reliable, and performant cloud applications on AWS.
+        </p>
+        <div class="mt-8 space-x-4">
+          <a href="contact.html"
+             class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-500 transition">
+            Let's Connect
+          </a>
+          <a href="https://drive.google.com/file/d/1uGkb1WPBB-zYA_2HgR5THoivwev7fWtE/view?usp=sharing"
+             target="_blank"
+             class="px-6 py-3 border border-blue-600 text-blue-600 font-semibold rounded-full hover:bg-blue-50 transition">
+            My Resume
+          </a>
+        </div>
+      </div>
+    </section>
 
-        <section class="bg-blue-800 text-white py-20">
-      <div class="max-w-3xl mx-auto text-center px-4">
-        <h2 class="text-4xl font-bold mb-4">Nice to meet you 👋</h2>
-        <p class="text-lg leading-relaxed">
-          With over 6 years in development and design, I deliver digital products for businesses.
-          Now, as an <strong>AWS Certified Cloud Practitioner</strong>, I specialize in building, deploying,
-          and managing scalable cloud applications on AWS. I’m calm, curious, and always improving one project at a time.
-        </p>
-      </div>
-    </section>
 
----
+    <!-- INTRO / ABOUT -->
+    <section class="bg-blue-800 text-white py-20">
+      <div class="max-w-3xl mx-auto text-center px-4">
+        <h2 class="text-4xl font-bold mb-4">Nice to meet you 👋</h2>
+        <p class="text-lg leading-relaxed">
+          With over 6 years in development and design, I deliver digital products for businesses.
+          Now, as an <strong>AWS Certified Cloud Practitioner</strong>, I specialize in building, deploying,
+          and managing scalable cloud applications on AWS. I’m calm, curious, and always improving one project at a time.
+        </p>
+      </div>
+    </section>
 
-        <section class="py-20">
-      <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
 
-                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition p-6 flex flex-col">
-          <img src="./img/cloud.gif" alt="Cloud Engineer" class="h-20 w-auto mx-auto mb-4" />
-          <h3 class="text-xl font-semibold text-blue-600 mb-2 text-center">AWS Cloud Engineer</h3>
-          <p class="text-gray-600 text-center flex-grow">
-            I design, deploy, and manage secure, scalable, and cost-effective infrastructure on AWS.
-          </p>
-          <ul class="mt-4 space-y-1 text-sm text-gray-500 text-center">
-            <li><strong>Core Services:</strong> EC2, S3, IAM, VPC, RDS, CloudFormation/Terraform</li>
-            <li><strong>Practices:</strong> IaC, CI/CD, Networking, Monitoring</li>
-          </ul>
-          <div class="mt-4 flex justify-center space-x-2">
-            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">#AWS</span>
-            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">#CloudFormation</span>
-            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">#DevOps</span>
-          </div>
-        </div>
+    <!-- SERVICES -->
+    <section class="py-20">
+      <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
 
-                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition p-6 flex flex-col">
-          <img src="./img/hacker.gif" alt="Full-Stack Developer" class="h-20 w-auto mx-auto mb-4" />
-          <h3 class="text-xl font-semibold text-blue-600 mb-2 text-center">Cloud & Full-Stack Developer</h3>
-          <p class="text-gray-600 text-center flex-grow">
-            Bridging front-end UX with scalable serverless back-ends.
-          </p>
-          <ul class="mt-4 space-y-1 text-sm text-gray-500 text-center">
-            <li><strong>Languages/Frameworks:</strong> HTML, CSS, JavaScript, Node.js, Python, Tailwind</li>
-            <li><strong>Serverless Stack:</strong> Lambda, API Gateway, DynamoDB, SQS/SNS, SAM/CDK</li>
-          </ul>
-          <div class="mt-4 flex justify-center space-x-2">
-            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">#Serverless</span>
-            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">#FullStack</span>
-            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">#JavaScript</span>
-          </div>
-        </div>
+        <!-- Card 1 -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition p-6 flex flex-col">
+          <img src="./img/cloud.gif" alt="Cloud Engineer" class="h-20 w-auto mx-auto mb-4" />
+          <h3 class="text-xl font-semibold text-blue-600 mb-2 text-center">AWS Cloud Engineer</h3>
+          <p class="text-gray-600 text-center flex-grow">
+            I design, deploy, and manage secure, scalable, and cost-effective infrastructure on AWS.
+          </p>
+          <ul class="mt-4 space-y-1 text-sm text-gray-500 text-center">
+            <li><strong>Core Services:</strong> EC2, S3, IAM, VPC, RDS, CloudFormation/Terraform</li>
+            <li><strong>Practices:</strong> IaC, CI/CD, Networking, Monitoring</li>
+          </ul>
+          <div class="mt-4 flex justify-center space-x-2">
+            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">#AWS</span>
+            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">#CloudFormation</span>
+            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">#DevOps</span>
+          </div>
+        </div>
 
-                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition p-6 flex flex-col">
-          <img src="./img/layers.gif" alt="Designer" class="h-20 w-auto mx-auto mb-4" />
-          <h3 class="text-xl font-semibold text-blue-600 mb-2 text-center">Visual Designer</h3>
-          <p class="text-gray-600 text-center flex-grow">
-            I create elegant user experiences with thoughtful design and clean UI.
-          </p>
-          <ul class="mt-4 space-y-1 text-sm text-gray-500 text-center">
-            <li><strong>Focus Areas:</strong> UX, UI, Web Design, Branding</li>
-            <li><strong>Tools:</strong> Figma, Adobe XD, Sketch, Webflow</li>
-          </ul>
-          <div class="mt-4 flex justify-center space-x-2">
-            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">#UX/UI</span>
-            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">#Figma</span>
-          </div>
-        </div>
+        <!-- Card 2 -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition p-6 flex flex-col">
+          <img src="./img/hacker.gif" alt="Full-Stack Developer" class="h-20 w-auto mx-auto mb-4" />
+          <h3 class="text-xl font-semibold text-blue-600 mb-2 text-center">Cloud & Full-Stack Developer</h3>
+          <p class="text-gray-600 text-center flex-grow">
+            Bridging front-end UX with scalable serverless back-ends.
+          </p>
+          <ul class="mt-4 space-y-1 text-sm text-gray-500 text-center">
+            <li><strong>Languages/Frameworks:</strong> HTML, CSS, JavaScript, Node.js, Python, Tailwind</li>
+            <li><strong>Serverless Stack:</strong> Lambda, API Gateway, DynamoDB, SQS/SNS, SAM/CDK</li>
+          </ul>
+          <div class="mt-4 flex justify-center space-x-2">
+            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">#Serverless</span>
+            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">#FullStack</span>
+            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">#JavaScript</span>
+          </div>
+        </div>
 
-      </div>
-    </section>
+        <!-- Card 3 -->
+        <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition p-6 flex flex-col">
+          <img src="./img/layers.gif" alt="Designer" class="h-20 w-auto mx-auto mb-4" />
+          <h3 class="text-xl font-semibold text-blue-600 mb-2 text-center">Visual Designer</h3>
+          <p class="text-gray-600 text-center flex-grow">
+            I create elegant user experiences with thoughtful design and clean UI.
+          </p>
+          <ul class="mt-4 space-y-1 text-sm text-gray-500 text-center">
+            <li><strong>Focus Areas:</strong> UX, UI, Web Design, Branding</li>
+            <li><strong>Tools:</strong> Figma, Adobe XD, Sketch, Webflow</li>
+          </ul>
+          <div class="mt-4 flex justify-center space-x-2">
+            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">#UX/UI</span>
+            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">#Figma</span>
+          </div>
+        </div>
 
----
+      </div>
+    </section>
 
-        <section class="bg-blue-50 py-20">
-      <div class="max-w-5xl mx-auto px-4 text-center mb-12">
-        <h2 class="text-4xl font-bold mb-4">My Work & Cloud Projects ☁️</h2>
-        <p class="text-gray-600">A collection of my recent web designs, cloud deployments, and creative work.</p>
-      </div>
 
-      <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <a href="https://skillsprofile.skillbuilder.aws/user/daniel-kwabena-marmo/certification-badges" class="block bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition p-6">
-          <h3 class="text-xl font-semibold mb-2">Serverless Contact API</h3>
-          <p class="text-gray-500">AWS Lambda · API Gateway · DynamoDB</p>
-        </a>
+    <!-- PROJECTS / PORTFOLIO -->
+    <section class="bg-blue-50 py-20">
+      <div class="max-w-5xl mx-auto px-4 text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4">My Work & Cloud Projects ☁️</h2>
+        <p class="text-gray-600">A collection of my recent web designs, cloud deployments, and creative work.</p>
+      </div>
 
-                <a href="https://kwarleyzgroup.com/" target="_blank"
-           class="block bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition p-6">
-          <h3 class="text-xl font-semibold mb-2">Kwarleyz Group</h3>
-          <p class="text-gray-500">Webapp Design & Development</p>
-        </a>
+      <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Example project card (repeat as needed) -->
+        <a href="https://skillsprofile.skillbuilder.aws/user/daniel-kwabena-marmo/certification-badges" class="block bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition p-6">
+          <h3 class="text-xl font-semibold mb-2">Serverless Contact API</h3>
+          <p class="text-gray-500">AWS Lambda · API Gateway · DynamoDB</p>
+        </a>
 
-                        <a href="https://kwarleyzresidence.com/" target="_blank"
-           class="block bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition p-6">
-          <h3 class="text-xl font-semibold mb-2">Kwarleyz Residence</h3>
-          <p class="text-gray-500">UI Design & Official Website</p>
-        </a>
+        <a href="https://kwarleyzgroup.com/" target="_blank"
+           class="block bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition p-6">
+          <h3 class="text-xl font-semibold mb-2">Kwarleyz Group</h3>
+          <p class="text-gray-500">Webapp Design & Development</p>
+        </a>
 
-                <a href="https://wondaworldestates.com/" target="_blank"
-           class="block bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition p-6">
-          <h3 class="text-xl font-semibold mb-2">Wonda World Estates</h3>
-          <p class="text-gray-500">Website Design & Development</p>
-        </a>
+        <a href="http://https://kwarleyzresidence.com/" target="_blank"
+           class="block bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition p-6">
+          <h3 class="text-xl font-semibold mb-2">Kwarleyz Residence</h3>
+          <p class="text-gray-500">UI Design & Official Website</p>
+        </a>
 
-                <a href="https://behance.net/danielmarmo2" target="_blank"
-           class="block bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition p-6">
-          <h3 class="text-xl font-semibold mb-2">Design Portfolio</h3>
-          <p class="text-gray-500">Graphic Design Work</p>
-        </a>
+        <a href="https://wondaworldestates.com/" target="_blank"
+           class="block bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition p-6">
+          <h3 class="text-xl font-semibold mb-2">Wonda World Estates</h3>
+          <p class="text-gray-500">Website Design & Development</p>
+        </a>
 
-                <a href="https://www.instagram.com/marmostudios/" target="_blank"
-           class="block bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition p-6">
-          <h3 class="text-xl font-semibold mb-2">Media Portfolio</h3>
-          <p class="text-gray-500">Photography & Video</p>
-        </a>
+        <a href="https://behance.net/danielmarmo2" target="_blank"
+           class="block bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition p-6">
+          <h3 class="text-xl font-semibold mb-2">Design Portfolio</h3>
+          <p class="text-gray-500">Graphic Design Work</p>
+        </a>
 
-      </div>
-    </section>
+        <a href="https://www.instagram.com/marmostudios/" target="_blank"
+           class="block bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition p-6">
+          <h3 class="text-xl font-semibold mb-2">Media Portfolio</h3>
+          <p class="text-gray-500">Photography & Video</p>
+        </a>
 
-  </main>
+      </div>
+    </section>
 
+  </main>
+
+<!-- FOOTER -->
 <footer class="bg-blue-900 text-white py-10">
-  <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
+  <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
 
-         <div class="flex gap-6 text-2xl">
+   <!-- Social Media Icons -->
+      <div class="flex gap-6 text-2xl">
     <a href="https://www.instagram.com/kwabenamarmo/" 
-       class="text-white hover:text-blue-300 transition-colors" 
-       aria-label="Instagram">
+       class="text-white hover:text-blue-300 transition-colors" 
+       aria-label="Instagram">
       <ph-icon name="instagram-logo" weight="fill"></ph-icon>
     </a>
     <a href="https://www.linkedin.com/in/danielkwabenamarmo/" 
-       class="text-white hover:text-blue-300 transition-colors" 
-       aria-label="LinkedIn">
+       class="text-white hover:text-blue-300 transition-colors" 
+       aria-label="LinkedIn">
       <ph-icon name="linkedin-logo" weight="fill"></ph-icon>
     </a>
     <a href="https://github.com/kwabenamarmo" 
-       class="text-white hover:text-blue-300 transition-colors" 
-       aria-label="GitHub">
+       class="text-white hover:text-blue-300 transition-colors" 
+       aria-label="GitHub">
       <ph-icon name="github-logo" weight="fill"></ph-icon>
     </a>
 </div>
 
-            <div class="text-center text-sm text-gray-400 md:text-right">
-      © 2025 Daniel Kwabena Marmo. All rights reserved.
-    </div>
+    <!-- Copyright -->
+    <div class="text-center text-sm text-white  md:text-right">
+      <strong>© 2025 Daniel Kwabena Marmo</strong>
+    </div>
 
-  </div>
+  </div>
 </footer>
 
 
